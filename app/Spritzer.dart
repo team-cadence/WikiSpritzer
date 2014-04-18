@@ -9,7 +9,7 @@ class Spritzer {
   static const int wordsPerSecond = 4;
   static const int initialDelaySeconds = 2;
 
-  static final DivElement view = querySelector('p#spritz_field');
+  static final ParagraphElement view = querySelector('p#spritz_field');
 
   /**
    Accepts a list of Strings where each String is a paragraph.
