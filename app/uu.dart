@@ -1,9 +1,8 @@
 
 import 'dart:html';
+import 'Fetcherang.dart';
 
 import 'package:chrome/chrome_app.dart' as chrome;
-
-import 'Spritzer.dart';
 
 int boundsChange = 100;
 
@@ -16,10 +15,11 @@ int boundsChange = 100;
 void main() {
 
   // +3 luk
-  String paragraph = "Hello, world.|What is this place?";
-  List<String> article = paragraph.split('|');
+  Fetcherang f = new Fetcherang();
+  f.fetchArticleAsList("banana");
 
-  Spritzer.spritzArticle(article);
+
+
 }
 
 void resizeWindow(MouseEvent event) {
