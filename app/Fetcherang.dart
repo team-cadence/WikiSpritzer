@@ -1,5 +1,6 @@
 import 'dart:html';
-import 'dart:convert' show JSON;
+import 'dart:convert';
+import 'Spritzer.dart';
 
 class Fetcherang {
   bool done = false;
@@ -16,10 +17,11 @@ class Fetcherang {
     .then((String fileContents) {
       print(fileContents);
       result = fileContents;
-      if(result == "Not Found") return null; // Six Little Eggs
-
+      if(result == "Not Found") Spritzer.spritzArticle("NO ARTICLE".split(" "));
+      //Spritzer.spritzArticle(JSON);
       //return JSON.deco
-      print(result);
+      Spritzer.spritzArticle(JSON.decode(result));
+
 
       done = true;
       //return JSON.decode(result);

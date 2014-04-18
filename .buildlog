@@ -33,3 +33,63 @@ build.dart --machine --changed=app\uu.html
 
 build.dart finished [102 ms]
 
+---
+build.dart --machine --changed=app\Fetcherang.dart --changed=app\uu.dart
+
+build.dart finished [114 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [102 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [115 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [102 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart --changed=app\uu.dart
+
+build.dart finished [106 ms]
+
+---
+build.dart --machine --changed=app\uu.dart
+
+build.dart finished [305 ms]
+
+---
+build.dart --machine --changed=app\Spritzer.dart
+
+build.dart finished [101 ms]
+
+---
+build.dart --machine --changed=app\Spritzer.dart
+
+build.dart finished [118 ms]
+
+---
+build.dart --machine --changed=app\Spritzer.dart
+
+build.dart finished [219 ms]
+
+---
+build.dart --machine --changed=app\Spritzer.dart
+
+build.dart finished [108 ms]
+
+---
+build.dart --machine --changed=app\Spritzer.dart
+
+build.dart finished [157 ms]
+
+---
+build.dart --machine --changed=app\Spritzer.dart
+
+build.dart finished [103 ms]
+
