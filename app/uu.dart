@@ -15,7 +15,11 @@ int boundsChange = 100;
  */
 void main() {
   //querySelector("#text_id").onClick.listen();
-  Spritzer.spritzParagraph("Hello, world. What is this place?");
+
+  String paragraph = "Hello, world. What is this place?";
+  List<String> words = paragraph.split(' ');
+
+  Spritzer.spritz(words);
 }
 
 void resizeWindow(MouseEvent event) {

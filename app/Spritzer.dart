@@ -3,25 +3,46 @@ import 'dart:async';
 
 class Spritzer {
 
-  // TODO: Add a way of splitting words.
+  // TODO: Add a way of splitting words that are too long. displayHalfWord(listIndex, wordPartIndex)?
 
-  static const int wordsPerSecond = 2;
-  static final DivElement view = querySelector('div#spritz_text_field');
+  static const String greeting = "Get ready!";
+  static const int wordsPerSecond = 8;
+  static const int initialDelaySeconds = 3;
 
-  static void displayNextWord(List words, int index) {
+  static final DivElement view = querySelector('p#spritz_field');
+
+  static void displayNextWord(List<String> words, int index) {
 
     if (index == words.length) return;
 
-    new Future.delayed(const Duration(milliseconds: 1000 * 1/wordsPerSecond), () {
-      view.text = words[index];
+    view.text = words[index];
+
+    // Display only wordsPerSecond words per second.
+    new Future.delayed(new Duration(milliseconds: delayMilliseconds), () {
       displayNextWord(words, index + 1);
     });
   }
 
+  static void updateCountdown(int callNumber) {
+    if (callNumber >= initialDelaySeconds) return;
 
-  static void spritzParagraph(String paragraph) {
-    List<String> words = paragraph.split(" ");
+    view.text = "$greeting ${(initialDelaySeconds) - callNumber}...";
 
-    displayNextWord(words, 0);
+    new Future.delayed(new Duration(seconds: 1), () {
+      updateCountdown(callNumber + 1);
+    });
   }
+
+  static void spritz(List<String> words) {
+    // Render first word after initial delay.
+    new Future.delayed(new Duration(seconds: initialDelaySeconds), () {
+      displayNextWord(words, 0);
+    });
+
+    updateCountdown(0);
+  }
+
+  static int get delayMilliseconds => (1000 * 1 / wordsPerSecond).round();
+
+  static int get wordsPerMinute => wordsPerSecond * 60;
 }
