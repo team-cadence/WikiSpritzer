@@ -14,12 +14,12 @@ int boundsChange = 100;
  * * http://developer.chrome.com/apps/api_index.html
  */
 void main() {
-  //querySelector("#text_id").onClick.listen();
 
-  String paragraph = "Hello, world. What is this place?";
-  List<String> words = paragraph.split(' ');
+  // +3 luk
+  String paragraph = "Hello, world.|What is this place?";
+  List<String> article = paragraph.split('|');
 
-  Spritzer.spritz(words);
+  Spritzer.spritzArticle(article);
 }
 
 void resizeWindow(MouseEvent event) {
