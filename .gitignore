@@ -6,6 +6,9 @@ build/
 packages/
 .buildlog
 
+# Dunno wtf happened here. This is a symlink, so no / at the end.
+app/packages
+
 # Or the files created by dart2js.
 *.dart.js
 *.dart.precompiled.js
