@@ -53,3 +53,8 @@ build.dart --machine --changed=app\Fetcherang.dart
 
 build.dart finished [104 ms]
 
+---
+build.dart --machine --changed=app\Fetcherang.dart --changed=app\uu.html --changed=pubspec.yaml --removed=php\i...
+
+build.dart finished [127 ms]
+
