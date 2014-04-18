@@ -14,8 +14,16 @@ if(isset($_GET['keyword'])){
 }
 
 function getContentFromWikipedia($keyword){
-    if($html = file_get_contents('http://en.wikipedia.org/wiki/' . $keyword))
-        echo $html;
-    else
+    if($html = file_get_contents('http://en.wikipedia.org/wiki/Taco')){
+        $returnArr = array();
+        $dom = new DOMDocument();
+        $dom->loadHTML($html);
+        $xpath = new DOMXpath($dom);
+        $result = $xpath->query('//body/div[@id="content"]/div[@id="bodyContent"]/div[@id="mw-content-text"]/p');
+        foreach ($result as $p) {
+            $returnArr[] = $p->nodeValue;
+        }
+        echo json_encode($returnArr);
+    }else
         echo "Not Found";
 }

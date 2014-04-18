@@ -1,0 +1,5 @@
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [100 ms]
+
