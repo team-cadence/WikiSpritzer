@@ -297,8 +297,8 @@ P.dT(P.k5(0,0,0,0,0,3),new S.ox(a),null)},
 zc:function(a,b){var z,y
 H.qI(a,"$isList",[J.O],"$aszM")
 z=a.length
-if(b===z)return
-if($.wP)return
+if(b===z){$.n6().textContent="Done. Search for another keyword to learn more!"
+return}if($.wP)return
 y=$.n6()
 if(b>=z)return H.e(a,b)
 y.textContent=H.IV(a[b])
