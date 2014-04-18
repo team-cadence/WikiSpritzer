@@ -22,7 +22,7 @@ function getContentFromWikipedia($keyword){
         $result = $xpath->query('//body/div[@id="content"]/div[@id="bodyContent"]/div[@id="mw-content-text"]/p');
         foreach ($result as $p) {
 	    $value = $p->nodeValue;
-            $value = preg_replace('/\[\d+]/', '', $value);
+            $value = preg_replace('/\[.+]/', '', $value);
             $returnArr[] = $value;
         }
         echo json_encode($returnArr);
