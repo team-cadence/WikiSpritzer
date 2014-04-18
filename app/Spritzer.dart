@@ -1,13 +1,17 @@
 import 'dart:html';
 import 'dart:async';
 
+import 'Fetcherang.dart';
+
 class Spritzer {
 
   // TODO: Add a way of splitting words that are too long. displayHalfWord(listIndex, wordPartIndex)?
 
   static const String greeting = "Get ready!";
-  static int wordsPerSecond = 20;
-  static const int initialDelaySeconds = 2;
+  static int wordsPerSecond = 4;
+  static const int initialDelaySeconds = 3;
+
+  static bool stopSignal = false;
 
   static final ParagraphElement view = querySelector('p#spritz_field');
 
@@ -16,6 +20,16 @@ class Spritzer {
       Reverses the order of the paragraphs and the words in each paragraph before
       spritzing them (i.e., displaying them to the user one by one).
    */
+
+  static void restart(String keyword) {
+    stopSignal = true;
+
+    new Future.delayed(new Duration(seconds: 2), () {
+      stopSignal = false;
+    });
+
+    Fetcherang.fetchArticleAsList(keyword);
+  }
 
   static void spritzArticle(List<String> article) {
 
@@ -51,6 +65,7 @@ class Spritzer {
   static void displayNextWord(List<String> words, int index) {
 
     if (index == words.length) return;
+    if (stopSignal) return;
 
     view.text = words[index]; // such comment
 
@@ -61,7 +76,7 @@ class Spritzer {
   }
 
   static void updateCountdown(int callNumber) {
-    if (callNumber >= initialDelaySeconds) return;
+    if (callNumber >= initialDelaySeconds + 1) return;
 
     view.text = "$greeting ${(initialDelaySeconds) - callNumber}...";
 
