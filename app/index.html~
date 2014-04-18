@@ -16,7 +16,7 @@
 
     <div id="widgets" style="text-align: center; margin-top: 60px;">
         <div>
-            <label for="keyword_input">Keyword:</label>
+            <label for="keyword_input">New keyword</label>
             <input id="keyword_input" type="text" value="banana" placeholder="Banana, taco, ..."/>
             <input id="search_button" type="submit" value="Search"/>
         </div>
