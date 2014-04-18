@@ -38,3 +38,58 @@ build.dart --machine --changed=UU.iml --changed=app\Fetcherang.dart
 
 build.dart finished [368 ms]
 
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [96 ms]
+
+---
+build.dart --machine --changed=pubspec.yaml
+
+build.dart finished [193 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+
+build.dart finished [177 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+
+build.dart finished [116 ms]
+
+---
+build.dart --machine --changed=app\uu.html
+
+build.dart finished [127 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [106 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [112 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [103 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [110 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [99 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [104 ms]
+
