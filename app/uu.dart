@@ -3,6 +3,8 @@ import 'dart:html';
 
 import 'package:chrome/chrome_app.dart' as chrome;
 
+import 'Spritzer.dart';
+
 int boundsChange = 100;
 
 /**
@@ -12,7 +14,12 @@ int boundsChange = 100;
  * * http://developer.chrome.com/apps/api_index.html
  */
 void main() {
-  //querySelector("#text_id").onClick.listen();
+
+  // +3 luk
+  String paragraph = "Hello, world.|What is this place?";
+  List<String> article = paragraph.split('|');
+
+  Spritzer.spritzArticle(article);
 }
 
 void resizeWindow(MouseEvent event) {

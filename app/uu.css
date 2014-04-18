@@ -18,8 +18,10 @@ h1, p {
   background-color: #fff;
 }
 
-#text_id {
+#spritz_field {
   font-size: 24pt;
   text-align: center;
+
+  width: 100%;
   margin-top: 140px;
 }
