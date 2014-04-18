@@ -1,5 +1,6 @@
 
 import 'dart:html';
+import 'Fetcherang.dart';
 
 import 'package:chrome/chrome_app.dart' as chrome;
 
@@ -12,7 +13,13 @@ int boundsChange = 100;
  * * http://developer.chrome.com/apps/api_index.html
  */
 void main() {
-  //querySelector("#text_id").onClick.listen();
+
+  // +3 luk
+  Fetcherang f = new Fetcherang();
+  f.fetchArticleAsList("banana");
+
+
+
 }
 
 void resizeWindow(MouseEvent event) {

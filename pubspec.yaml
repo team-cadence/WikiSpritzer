@@ -4,3 +4,5 @@ dependencies:
   browser: any
   chrome: any
   js: any
+  json: any
+
