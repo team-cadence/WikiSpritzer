@@ -1,24 +1,33 @@
 import 'dart:html';
-import 'package:json/json.dart' as KAKE;
+import 'dart:convert' show JSON;
 
 class Fetcherang {
-
-  String url = "http://";
+  bool done = false;
+  String url = "http://cadence.singles/wiki/?keyword=";
 
   Fetcherang() {
 
   }
 
-  List<String> fetchArticleAsList(String keyword){
-    String url = url;
-    XMLHttpRequest request = new XMLHttpRequest();
-    request.open("GET", url, async : false);
-    request.send();
-    var result = request.responseText;
+   void fetchArticleAsList(String keyword){
+    var result;
+    done = false;
+    HttpRequest.getString(url + keyword)
+    .then((String fileContents) {
+      print(fileContents);
+      result = fileContents;
+      if(result == "Not Found") return null; // Six Little Eggs
 
-    if(result == "Not Found") return null; // Six Little Eggs
+      //return JSON.deco
+      print(result);
 
-    KAKE.parse(result);
+      done = true;
+      //return JSON.decode(result);
+    })
+    .catchError((Error error) {
+      return null;
+    });
+
 
   }
 

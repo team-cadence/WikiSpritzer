@@ -1,5 +1,6 @@
 
 import 'dart:html';
+import 'Fetcherang.dart';
 
 import 'package:chrome/chrome_app.dart' as chrome;
 
@@ -20,6 +21,7 @@ void main() {
   List<String> article = paragraph.split('|');
 
   Spritzer.spritzArticle(article);
+
 }
 
 void resizeWindow(MouseEvent event) {
