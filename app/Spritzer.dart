@@ -64,7 +64,11 @@ class Spritzer {
 
   static void displayNextWord(List<String> words, int index) {
 
-    if (index == words.length) return;
+    if (index == words.length) {
+	view.text = "Done. Search for another keyword to learn more!";	
+	return;
+    }
+
     if (stopSignal) return;
 
     view.text = words[index]; // such comment
