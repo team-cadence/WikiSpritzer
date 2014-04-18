@@ -14,7 +14,7 @@ if(isset($_GET['keyword'])){
 }
 
 function getContentFromWikipedia($keyword){
-    if($html = file_get_contents('http://en.wikipedia.org/wiki/Taco')){
+    if($html = file_get_contents('http://en.wikipedia.org/wiki/' . $keyword)){
         $returnArr = array();
         $dom = new DOMDocument();
         $dom->loadHTML($html);
