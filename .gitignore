@@ -1,16 +1,23 @@
 # Created by http://www.gitignore.io
 
+# FUCKING BLOODY SHIT
+.DS_Store
+
 ### Dart ###
 # Don't commit the following directories created by pub.
 build/
 packages/
+.buildlog
+
+# Dunno wtf happened here. This is a symlink, so no / at the end.
+app/packages
 
 # Or the files created by dart2js.
-*.dart.js
-*.dart.precompiled.js
-*.js_
-*.js.deps
-*.js.map
+#*.dart.js
+#*.dart.precompiled.js
+#*.js_
+#*.js.deps
+#*.js.map
 
 # Include when developing application packages.
 pubspec.lock
