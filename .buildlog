@@ -3,3 +3,113 @@ build.dart --machine --changed=app\Fetcherang.dart
 
 build.dart finished [98 ms]
 
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [100 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [99 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [107 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [110 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [103 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [108 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [106 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [106 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [112 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [95 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [158 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [118 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [117 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [167 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [111 ms]
+
+---
+build.dart --machine --changed=pubspec.yaml
+
+build.dart finished [156 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+
+build.dart finished [161 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [108 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [126 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [100 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [115 ms]
+
+---
+build.dart --machine --changed=app\Fetcherang.dart
+
+build.dart finished [104 ms]
+
