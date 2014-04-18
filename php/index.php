@@ -21,9 +21,9 @@ function getContentFromWikipedia($keyword){
         $xpath = new DOMXpath($dom);
         $result = $xpath->query('//body/div[@id="content"]/div[@id="bodyContent"]/div[@id="mw-content-text"]/p');
         foreach ($result as $p) {
-            str_replace('\[\d+]', '', $p);
-            str_replace('\\u.{4}', '', $p);
-            $returnArr[] = $p->nodeValue;
+	    $value = $p->nodeValue;
+            $value = preg_replace('/\[[0-9]+]/', '', $value);
+            $returnArr[] = $value;
         }
         echo json_encode($returnArr);
     }else
