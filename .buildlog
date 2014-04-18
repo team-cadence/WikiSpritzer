@@ -93,3 +93,28 @@ build.dart --machine --changed=php\index.php
 
 build.dart finished [104 ms]
 
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [113 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [105 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [99 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [101 ms]
+
+---
+build.dart --machine --changed=php\index.php
+
+build.dart finished [97 ms]
+
