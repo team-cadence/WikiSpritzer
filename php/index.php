@@ -20,10 +20,18 @@ function getContentFromWikipedia($keyword){
         $dom->loadHTML($html);
         $xpath = new DOMXpath($dom);
         $result = $xpath->query('//body/div[@id="content"]/div[@id="bodyContent"]/div[@id="mw-content-text"]/p');
-        foreach ($result as $p) {
-	    $value = $p->nodeValue;
-            $value = preg_replace('/\[.+]/', '', $value);
-            $returnArr[] = $value;
+        if(strstr($result[0]->nodeValue, "may refer to:") > -1){
+            $returnArr[] = "disambiguation";
+            $ul = $xpath->query('//body/div[@id="content"]/div[@id="bodyContent"]/div[@id="mw-content-text"]/ul/li/a');
+            foreach($ul as $u){
+                $returnArr[] = str_replace(" ", "_", $u->nodeValue);
+            }
+        }else {
+            foreach ($result as $p) {
+                $value = $p->nodeValue;
+                $value = preg_replace('/\[.+]/', '', $value);
+                $returnArr[] = $value;
+            }
         }
         echo json_encode($returnArr);
     }else

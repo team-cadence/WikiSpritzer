@@ -62,6 +62,14 @@ class Spritzer {
     });
   }
 
+  static void disambiguation(List<String> list){
+    String text = "";
+    for(int i = 0; i < list.length; i++)
+      text += '<a href="#" class="disambiguation">' + list[i] + '</a><br />';
+
+    view.text = text;
+  }
+
   static void displayNextWord(List<String> words, int index) {
 
     if (index == words.length) {
