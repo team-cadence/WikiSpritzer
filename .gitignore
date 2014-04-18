@@ -1,5 +1,8 @@
 # Created by http://www.gitignore.io
 
+# FUCKING BLOODY SHIT
+.DS_Store
+
 ### Dart ###
 # Don't commit the following directories created by pub.
 build/
