@@ -17,4 +17,4 @@ Spritzing is a new way of reading really fast. Spritzipedia lets you search for 
 
 
 
-(backwards).
+<sup>(backwards).</sup>
